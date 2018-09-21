@@ -43,10 +43,7 @@ public class Main {
 	public static void imprimirMediaSaldos() {
 		service
 			.listClients()
-			.stream()
-			.map(c -> c.getName() + ": " )
-			.distinct()
-			.forEach(n -> System.out.println(n));
+			.forEach(c -> c.getAccounts());
 	
 	}
 	
